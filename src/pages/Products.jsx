@@ -36,6 +36,7 @@ export const loader =
     //where the keys are the parameter names, and the values are the parameter values.
 
     // params here is used for pagination
+    // new URL is a full URL (e.g., "http://example.com?search=jayu&type=tv").
     const params = Object.fromEntries([
       ...new URL(request.url).searchParams.entries(),
     ]);

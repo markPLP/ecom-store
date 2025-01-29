@@ -30,7 +30,7 @@ export const loader = (queryClient) => async () => {
 // };
 
 const Landing = () => {
-  const { products } = useLoaderData();
+  const { products } = useLoaderData(); // IMPORTANT: wrap with {} data is an {OBJECT}, do not wrap if an ARRAY
   return (
     <>
       <Hero />

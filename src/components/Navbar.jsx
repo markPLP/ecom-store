@@ -1,19 +1,18 @@
-import { BsCart3, BsMoonFill, BsSunFill } from 'react-icons/bs';
-import { FaBarsStaggered } from 'react-icons/fa6';
-import { NavLink } from 'react-router-dom';
-import NavLinks from './NavLinks';
-import { useDispatch, useSelector } from 'react-redux';
-import { toogleTheme } from '../feature/user/userSlice';
+import { BsCart3, BsMoonFill, BsSunFill } from 'react-icons/bs'
+import { FaBarsStaggered } from 'react-icons/fa6'
+import { NavLink } from 'react-router-dom'
+import NavLinks from './NavLinks'
+import { useDispatch, useSelector } from 'react-redux'
+import { toogleTheme } from '../feature/user/userSlice'
 
 const Navbar = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
   const handleTheme = () => {
-    console.log('Dispatching theme toggle');
-    dispatch(toogleTheme());
-  };
+    dispatch(toogleTheme())
+  }
   // access the cart items
   //const numItemsInCart = useSelector((state) => state.cart.numItemsInCart);
-  const numItemsInCart = useSelector((state) => state.cartState.numItemsInCart);
+  const numItemsInCart = useSelector((state) => state.cartState.numItemsInCart)
 
   return (
     <nav className='bg-base-200'>
@@ -67,6 +66,6 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-  );
-};
-export default Navbar;
+  )
+}
+export default Navbar
